@@ -23,3 +23,24 @@ class TagRelation(models.Model):
     mood = models.ForeignKey(Mood)
     num_tag = models.IntegerField()
 
+
+class Utils(): 
+
+    @staticmethod
+    def insertNewVideo(video_id, category, mood_name, mood_input):
+        video = Video.objects.create(video_id=video_id, category=category)
+        mood = Mood.objects.create(mood_name=mood_name, popularity=None )
+        Utils.insertNewVideo2(video, mood)
+        
+    @staticmethod
+    def insertNewVideo2(video_input, mood_input):
+        #check if the relation video-mood exists already
+        numTags=0
+        tr = TagRelation.objects.get(video=video_input, mood=mood_input)
+        if tr:
+            numTags = tr.num_tags
+        numTags = numTags+1
+        #insert
+        m1 = TagRelation(video=video_input, mood=mood_input, num_tag=numTags)
+        m1.save()
+    
