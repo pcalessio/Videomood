@@ -13,5 +13,8 @@ urlpatterns = patterns('',
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
     # Uncomment the next line to enable the admin:
+    url(r'^VideoMoodApp/$', 'VideoMoodApp.views.search'),
+    url(r'^VideoMoodApp/insert/$', 'VideoMoodApp.views.insert'),
+    url(r'^VideoMoodApp/result/$', 'VideoMoodApp.views.result'),
     url(r'^admin/', include(admin.site.urls)),
 )
