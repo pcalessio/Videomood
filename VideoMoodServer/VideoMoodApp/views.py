@@ -1,13 +1,17 @@
 from django.shortcuts import render_to_response 
+from django.template import RequestContext
 
 def search(request):
-    return render_to_response('VideoMoodApp/search.html')
+    mydata = "a"
+    return render_to_response('VideoMoodApp/search.html', mydata, context_instance=RequestContext(request))
 
 def insert(request):
-    return render_to_response('VideoMoodApp/insert.html')
+    mydata = "a"
+    return render_to_response('VideoMoodApp/insert.html', mydata, context_instance=RequestContext(request))
 
 def result(request):
-    return render_to_response('VideoMoodApp/result.html')
+    mydata = "a"
+    return render_to_response('VideoMoodApp/result.html', mydata, context_instance=RequestContext(request))
 
 
 #def index(request):
