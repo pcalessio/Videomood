@@ -1,18 +1,260 @@
-
-
 /* ===== Primary Styles ========================================================
    Author:
    ========================================================================== */
 
+.full-search-bar {
+    margin: 0 auto 38px;
+    position: relative;
+    width: 72%;
+}
+
+ul.unstyled, ol.unstyled {
+    list-style: none outside none;
+    margin-left: 0;
+}
+
+.item-stream {
+    background-color: #F5F5F5;
+    border: 1px solid #D8D8D8;
+    border-radius: 6px 6px 6px 6px;
+}
+
+.search-input-stream {
+    margin-bottom: 0;
+}
+
+ul {
+    list-style: disc outside none;
+}
+
+ul, ol {
+    margin: 0 0 9px 25px;
+    padding: 0;
+}
 
 
+.full-search-bar .search-input-item {
+    border-radius: 9px 9px 9px 9px;
+    padding: 10px;
+}
+
+.stream-item, .ui-menu-item {
+    background-color: #F5F5F5;
+    padding: 6px;
+    position: relative;
+}
+
+li {
+    line-height: 18px;
+}
+
+.full-search-bar form {
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+}
+
+form {
+    margin: 0 0 18px;
+}
 
 
+.full-search-bar form input[type="text"] {
+    height: 35px;
+}
+
+.full-search-bar form input[type="text"] {
+    border-radius: 6px 0 0 6px;
+    border-right: 0 none;
+    float: left;
+    font-size: 20px;
+    height: 30px;
+    line-height: 24px;
+    margin-bottom: 0;
+    width: 95%;
+}
+
+.form-search input, .form-inline input, .form-horizontal input, .form-search textarea, .form-inline textarea, .form-horizontal textarea, .form-search select, .form-inline select, .form-horizontal select, .form-search .help-inline, .form-inline .help-inline, .form-horizontal .help-inline, .form-search .uneditable-input, .form-inline .uneditable-input, .form-horizontal .uneditable-input, .form-search .input-prepend, .form-inline .input-prepend, .form-horizontal .input-prepend, .form-search .input-append, .form-inline .input-append, .form-horizontal .input-append {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+:-moz-placeholder {
+    color: #999999;
+}
+
+input, textarea, .uneditable-input {
+    margin-left: 0;
+}
+
+input, textarea {
+    -moz-transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+
+input, textarea, select, .uneditable-input {
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    color: #555555;
+    display: inline-block;
+    font-size: 13px;
+    height: 18px;
+    line-height: 18px;
+    margin-bottom: 9px;
+    padding: 4px;
+    width: 210px;
+}
+
+input, button, select, textarea {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+label, input, button, select, textarea {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+}
+
+button, input {
+    line-height: normal;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.full-search-bar form button[type="submit"] {
+    height: 46px;
+}
+
+.full-search-bar form button[type="submit"] {
+    border-radius: 0 6px 6px 0;
+    height: 41px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 46px;
+}
+
+button.btn.btn-large, input.btn.btn-large[type="submit"] {
+}
+
+button.btn, input.btn[type="submit"] {
+}
+
+.btn-inverse {
+    background-color: #414141;
+    background-image: -moz-linear-gradient(center top , #555555, #222222);
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+}
+
+.btn-primary, .btn-primary:hover, .btn-warning, .btn-warning:hover, .btn-danger, .btn-danger:hover, .btn-success, .btn-success:hover, .btn-info, .btn-info:hover, .btn-inverse, .btn-inverse:hover {
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+.btn-large {
+    border-radius: 5px 5px 5px 5px;
+    font-size: 15px;
+    line-height: normal;
+    padding: 9px 14px;
+}
+
+.btn {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #F5F5F5;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    border-color: #CCCCCC #CCCCCC #B3B3B3;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    line-height: 18px;
+    margin-bottom: 0;
+    padding: 4px 10px;
+    text-align: center;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    vertical-align: middle;
+}
+
+input, button, select, textarea {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+label, input, button, select, textarea {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 18px;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+    cursor: pointer;
+}
+
+button, input {
+    line-height: normal;
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+    margin: 0;
+    vertical-align: middle;
+}
+
+.btn-large [class^="icon-"] {
+    margin-top: 1px;
+}
+
+[class^="icon-"]:last-child, [class*=" icon-"]:last-child {
+}
+
+[class^="icon-"]:last-child, [class*=" icon-"]:last-child {
+}
+
+.icon-search {
+    background-position: -48px 0;
+}
+
+.icon-white {
+    background-image: url("/static/img/glyphicons-halflings-white.png");
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    background-image: url("/static/img/glyphicons-halflings.png");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    width: 14px;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    background-image: url("/static/img/glyphicons-halflings.png");
+    background-position: 14px 14px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: text-top;
+    width: 14px;
+}
 
 
-
-
-
-
-
-
+.navbar-inner {
+    background-image: -moz-linear-gradient(center top , #333333, #992222);
+}

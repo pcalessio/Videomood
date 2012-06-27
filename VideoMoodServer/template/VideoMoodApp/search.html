@@ -51,10 +51,58 @@
     <div class="container">
 
       <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-        <h1>Search page!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+		<div class="hero-unit">
+
+			<h1>Search page!</h1>
+
+			<div class="full-search-bar">
+				<ul class="item-stream unstyled search-input-stream">
+					<li class="stream-item stream-header search-input-item">
+						<form class="form-inline search-form" action="result/">
+							<input class="xlarge ui-autocomplete-input" id="artist_search"
+								name="query" type="text"
+								placeholder="Which mood do you want to watch?"
+								autocomplete="off" value="" role="textbox"
+								aria-autocomplete="list" aria-haspopup="true" />
+							<button class="btn btn-large btn-inverse" id="artist_submit"
+								type="submit">
+								<i class="icon-play icon-white" />
+							</button>
+						</form> 
+						
+						<!--
+						this is for the list of suggestion words 
+						<form accept-charset="UTF-8" action="/playlists"
+							class="playlist-form" id="new_playlist" method="post">
+							<div style="margin: 0px; padding: 0px; display: inline;">
+								<input name="utf8" type="hidden" value="✓" /> <input
+									name="authenticity_token" type="hidden"
+									value="CLoqsSgalX2a4aTn60YLitCY5oZnZZ79WZvHAoa/leI=" />
+							</div>
+							<input type="hidden" class="artist-id" name="artist_id" value="" />
+						</form>
+						-->
+					</li>
+				</ul>
+				<!--
+				<div class="search-status">
+					<img src="/assets/circle_loader.gif" class="search-loader" />
+				</div>
+				<ul
+					class="ui-autocomplete ui-menu ui-widget ui-widget-content ui-corner-all"
+					role="listbox" aria-activedescendant="ui-active-menuitem"
+					style="z-index: 1; top: 0px; left: 0px; display: none;" />
+					-->
+			</div>
+		
+
+
+
+
+
+		<p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+      	</div>
       </div>
 
       <!-- Example row of columns -->

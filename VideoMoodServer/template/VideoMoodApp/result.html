@@ -24,6 +24,24 @@
 	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
 
 	<script src="{{ STATIC_URL }}js/libs/modernizr-2.5.3-respond-1.1.0.min.js"></script>
+	
+	
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript">
+      google.load("swfobject", "2.1");
+    </script>  
+    
+    <script src="{{ STATIC_URL }}js/libs/ytscript.js"></script>  
+    <script type="text/javascript">
+    
+      var videos = {{ videos|safe }};
+      google.setOnLoadCallback(_run);
+    </script>
+	
+	
+	
+	
+	
 </head>
 <body>
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
@@ -53,6 +71,14 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>result page!</h1>
+        
+        
+        
+        <div id="videoDiv">Loading...</div>
+        
+        
+        
+        
         <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
         <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
       </div>

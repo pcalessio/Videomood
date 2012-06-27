@@ -1,16 +1,16 @@
 from django.db import models
-
+from django import forms
 
 class Video(models.Model):
-    video_id = models.CharField(primary_key=True, max_length=20) 
-    category = models.CharField(null=True, blank=True, default='', max_length=20)
+    video_id = models.CharField(primary_key=True, max_length=40) 
+    category = models.CharField(null=True, blank=True, default='', max_length=40)
     
     def __unicode__(self):
         return self.video_id
     
     
 class Mood(models.Model):
-    mood_name = models.CharField(primary_key=True, max_length=20)
+    mood_name = models.CharField(primary_key=True, max_length=40)
     popularity = models.FloatField(null=True)
     videos = models.ManyToManyField(Video, through='TagRelation')
     
@@ -28,6 +28,14 @@ class TagRelation(models.Model):
         
     class Meta:
         unique_together = ('video', 'mood')
+        
+class VideoMoodForm(forms.Form):
+    video_id = forms.CharField(max_length=40) 
+    category = forms.CharField(required=False, max_length=40) 
+    mood_name = forms.CharField(max_length=40)         
+        
+        
+        
         
 class Utils(): 
 
