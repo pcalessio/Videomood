@@ -53,8 +53,8 @@ function updatePlayerInfo() {
 	if(ytplayer && ytplayer.getDuration) {
 		var duration = ytplayer.getDuration();
 		var currentTime = ytplayer.getCurrentTime();
-		if (duration-currentTime<0.5) {
-			alert("LOAD NEW VIDEO: duration-" + duration +" current:"+ currentTime);
+		if (duration!=0 && duration-currentTime<=0) {
+			//alert("LOAD NEW VIDEO: duration-" + duration +" current:"+ currentTime);
 			nextVideo();
 		}
 	}
