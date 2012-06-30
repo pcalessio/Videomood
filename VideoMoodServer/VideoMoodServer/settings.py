@@ -3,6 +3,11 @@
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+import os
+ROOT_PATH = os.path.dirname(__file__)
+
+DB_PATH = os.path.join(ROOT_PATH, '../sqlite.db')
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
@@ -12,7 +17,7 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/Users/alessio/git/videomood/VideoMoodServer/sqlite.db',                      # Or path to database file if using sqlite3.
+        'NAME': DB_PATH, #'/Users/alessio/git/videomood/VideoMoodServer/sqlite.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -70,7 +75,8 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    "/Users/alessio/git/videomood/VideoMoodServer/static/VideoMoodApp/",
+    #"/Users/alessio/git/videomood/VideoMoodServer/static/VideoMoodApp/",
+    os.path.join(ROOT_PATH, '../static/VideoMoodApp/'),
     
 )
 
@@ -112,6 +118,7 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     '/Users/alessio/git/videomood/VideoMoodServer/template/',
+    os.path.join(ROOT_PATH, '../template/'),
 )
 
 INSTALLED_APPS = (
