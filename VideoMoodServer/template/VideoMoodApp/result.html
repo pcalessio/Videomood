@@ -34,7 +34,15 @@
     <script src="{{ STATIC_URL }}js/libs/ytscript.js"></script>  
     <script type="text/javascript">
     
-      var videos = {{ videos|safe }};
+    videos = {{ videos|safe }};
+    videos_length = videos.length;
+    videos_now = 0;
+    
+      function furts(){
+    	  alert(videos_length);
+    	  alert(videos_now);  
+      }
+      	
       google.setOnLoadCallback(_run);
     </script>
 	
@@ -43,7 +51,7 @@
 	
 	
 </head>
-<body>
+<body >
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 
     <div class="navbar navbar-fixed-top">
@@ -71,8 +79,7 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>result page!</h1>
-        
-        
+        <input type="button" onclick="furts()" value="Show alert box" />
         
         <div id="videoDiv">Loading...</div>
         

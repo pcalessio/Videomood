@@ -9,14 +9,27 @@ function updateHTML(elmId, value) {
 
 // Loads the selected video into the player.
 function nextVideo() {
-	var video1 = "ylLzyHk54Z0";
-	var video3 = "GMUlhuTkM3w";
-	var videoID = video3;
-
-	if(ytplayer) {
-		ytplayer.loadVideoById(videoID);
+	//var video1 = "ylLzyHk54Z0";
+	//var video3 = "GMUlhuTkM3w";
+	//var videoID = video3;
+    videos_now = videos_now + 1;
+    if (videos_now>=videos_length){ 
+		videos_now =0;
 	}
+    if(ytplayer) {
+		ytplayer.loadVideoById(videos[videos_now]);
+	}
+    
 }
+
+function sleep(ms)
+{
+	var dt = new Date();
+	dt.setTime(dt.getTime() + ms);
+	while (new Date().getTime() < dt.getTime());
+}
+
+
 
 // This function is called when an error is thrown by the player
 function onPlayerError(errorCode) {
@@ -40,7 +53,10 @@ function updatePlayerInfo() {
 	if(ytplayer && ytplayer.getDuration) {
 		var duration = ytplayer.getDuration();
 		var currentTime = ytplayer.getCurrentTime();
-		if (duration-currentTime<0.5) nextVideo();
+		if (duration-currentTime<0.5) {
+			alert("LOAD NEW VIDEO: duration-" + duration +" current:"+ currentTime);
+			nextVideo();
+		}
 	}
 }
 
@@ -48,13 +64,13 @@ function updatePlayerInfo() {
 // The "main method" of this sample. Called when someone clicks "Run".
 function loadPlayer() {
 	// The video to load
-	var videoID = "ylLzyHk54Z0"
+	//var videoID = "ylLzyHk54Z0"
 		// Lets Flash from another domain call JavaScript
 		var params = { allowScriptAccess: "always" };
 	// The element id of the Flash embed
 	var atts = { id: "ytPlayer" };
 	// All of the magic handled by SWFObject (http://code.google.com/p/swfobject/)
-	swfobject.embedSWF("http://www.youtube.com/v/" + videoID +
+	swfobject.embedSWF("http://www.youtube.com/v/" + videos[0] +
 			"?version=3&enablejsapi=1&playerapiid=player1",
 			"videoDiv", "480", "295", "9", null, null, params, atts);
 }

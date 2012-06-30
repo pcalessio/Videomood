@@ -27,7 +27,7 @@ def result(request):
         return HttpResponse("No results for this query")
     else:
         #json_list = simplejson.dumps(videos)
-        return render_to_response('VideoMoodApp/result.html', {"videos":videos}, context_instance=RequestContext(request))
+        return render_to_response('VideoMoodApp/result.html', {"videos": simplejson.dumps(videos)}, context_instance=RequestContext(request))
 
 #for the autocomplete
 #TODO: it doesn't work... to be fixed
