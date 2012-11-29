@@ -11,6 +11,12 @@ def search(request):
     mydata = "a"
     return render_to_response('VideoMoodApp/search.html', mydata, context_instance=RequestContext(request))
 
+#this view is just to try the base template
+def base(request):
+    #later i will need to pass the data for the tag cloud
+    mydata = "a"
+    return render_to_response('VideoMoodApp/base.html', mydata, context_instance=RequestContext(request))
+
 def insertOld(request):
     mydata = "a"
     return render_to_response('VideoMoodApp/insert.html', mydata, context_instance=RequestContext(request))

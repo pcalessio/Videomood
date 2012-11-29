@@ -1,0 +1,45 @@
+html {
+    font-size: 100%;
+}
+
+body {
+    background-color: #FFFFFF;
+    color: #333333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+}
+
+body {
+    background-color: #2A313A;
+    background-image: -moz-linear-gradient(center top , #313944, #20252C);
+    background-repeat: repeat-x;
+}
+
+.container, .navbar-fixed-top .container, .navbar-fixed-bottom .container {
+    width: 940px;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+.container:before, .container:after {
+    content: "";
+    display: table;
+}
+.container:after {
+    clear: both;
+}
+.container-fluid {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.container-fluid:before, .container-fluid:after {
+    content: "";
+    display: table;
+}
+.container-fluid:after {
+    clear: both;
+}

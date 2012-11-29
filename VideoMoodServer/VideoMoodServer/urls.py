@@ -18,5 +18,6 @@ urlpatterns = patterns('',
     url(r'^VideoMoodApp/result/$', 'VideoMoodApp.views.result'),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^VideoMoodApp/lookup/$', 'book_lookup'),
-    url(r'^VideoMoodApp/insert_video/$', 'VideoMoodApp.views.insert')
+    url(r'^VideoMoodApp/insert_video/$', 'VideoMoodApp.views.insert'),
+    url(r'^VideoMoodApp/base/$', 'VideoMoodApp.views.base')
 )
